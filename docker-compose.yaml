@@ -2,9 +2,9 @@ version: "3"
 services:
   flask:
     build: .
-    command: gunicorn -b 0.0.0.0:5000 app.hello:app --reload
+    command: gunicorn -b 0.0.0.0:5000 app.app:app --reload
     environment:
-      - FLASK_APP=./app/hello.py
+      - FLASK_APP=./app/app.py
       - FLASK_DEBUG=1
       - PYTHONBUFFERED=True
     ports:
